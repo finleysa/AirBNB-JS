@@ -12,7 +12,7 @@ function send(data, fn){
   if(data.to.match(/@nomail.com/g)){fn(); return;}
 
   var key = process.env.MAILGUN;
-  var url = 'https://api:' + key + '@api.mailgun.net/v2/steven.finley.me/messages';
+  var url = 'https://api:' + key + '@api.mailgun.net/v2/stevenfinley.me/messages';
   var post = request.post(url, function(err, response, body){
     fn(err, body);
   });

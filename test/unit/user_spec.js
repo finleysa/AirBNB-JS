@@ -45,7 +45,8 @@ describe('User', function(){
         expect(err).to.be.null;
         expect(u1.password).to.have.length(60);
         body = JSON.parse(body);
-        //expect(body.id).to.be.ok;
+        expect(body.id).to.be.ok;
+        console.log(body);
         expect(u1._id).to.be.instanceof(Mongo.ObjectID);
         
         done();
