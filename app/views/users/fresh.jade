@@ -1,0 +1,22 @@
+extends ../shared/template
+
+block content
+  .row
+    .small-6.columns#redgy
+      h1 Register Here
+      form(action='/register', method='post') 
+        fieldset
+          legend Redgy Form
+          label Email
+          input(name='email', type="email", required)
+          .row
+            .small-6.columns
+              label Password
+              input(name='password', type="password", required)
+              button.tiny.radius Boom Sauce
+            .small-6.columns
+              label Choose Role
+              select(name='role', placeholder='Role')
+                option Host
+                option Guest
+    .small-6.columns
